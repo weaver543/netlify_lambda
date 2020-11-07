@@ -1,8 +1,9 @@
 console.log("kwrr1");
 
 const fetchUers = async () =>
-  // await( await fetch('http://localhost:9000/getusers')).json();
-  await( await fetch('/.netlify/function/getusers')).json();
+  // npm run lambda-build  
+   await( await fetch('http://localhost:9000/getusers')).json();
+  //await( await fetch('/.netlify/function/getusers')).json();
 
   fetchUers().then(data => {
     userList = document.querySelector('#users');
