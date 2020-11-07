@@ -1,11 +1,13 @@
-console.log("kwrr1");
+console.log("kwrr1a");
 
-const fetchUers = async () =>
   // npm run lambda-build  
-  // await( await fetch('http://localhost:9000/getusers')).json();
-  await( await fetch('/.netlify/function/getusers')).json();
 
-  fetchUers().then(data => {
+// const fetchUsers = async () => await( await fetch('http://localhost:9000/getusers')).json();
+const fetchUsers = async () => await( await fetch('/.netlify/functions/getusers')).json();
+
+console.log("kwrr1b");
+
+  fetchUsers().then(data => {
     userList = document.querySelector('#users');
 
     data.forEach(user => {
